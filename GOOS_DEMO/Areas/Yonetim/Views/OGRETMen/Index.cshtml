@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GOOS_DEMO.Models.OGRETMan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Yonetim/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BRAN.B_ADI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILETISIM.ILET_ADRES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KULLANICI.K_ADI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OGRETMEN_CINSIYET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OGRETMEN_ADI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OGRETMEN_SOYADI)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BRAN.B_ADI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILETISIM.ILET_ADRES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KULLANICI.K_ADI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OGRETMEN_CINSIYET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OGRETMEN_ADI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OGRETMEN_SOYADI)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OGRETMEN_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OGRETMEN_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OGRETMEN_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,67 @@
+﻿@model GOOS_DEMO.Models.ILETISIM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Yonetim/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ILETISIM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IL.I_ADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IL.I_ADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ILCE.IC_ADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILCE.IC_ADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ILET_ADRES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILET_ADRES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ILET_EV_TEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILET_EV_TEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ILET_CEP_TEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILET_CEP_TEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ILET_EPOSTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILET_EPOSTA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ILET_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

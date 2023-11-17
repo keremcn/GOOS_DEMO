@@ -1,0 +1,27 @@
+﻿@model GOOS_DEMO.Models.KULLANICI_TURU
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Yonetim/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KULLANICI_TURU</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KT_ADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KT_ADI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KT_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

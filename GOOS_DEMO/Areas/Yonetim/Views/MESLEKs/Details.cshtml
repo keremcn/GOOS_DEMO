@@ -1,0 +1,27 @@
+﻿@model GOOS_DEMO.Models.MESLEK
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Yonetim/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MESLEK</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.M_ADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.M_ADI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.M_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,67 @@
+﻿@model GOOS_DEMO.Models.OGRENCI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Yonetim/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OGRENCI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ILETISIM.ILET_ADRES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILETISIM.ILET_ADRES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KULLANICI.K_ADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KULLANICI.K_ADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCI_NO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCI_NO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCI_ADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCI_ADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCI_SOYADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCI_SOYADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCI_CINSIYET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCI_CINSIYET)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OGRENCI_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

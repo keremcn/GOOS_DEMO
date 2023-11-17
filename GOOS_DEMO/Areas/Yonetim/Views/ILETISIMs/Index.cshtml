@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GOOS_DEMO.Models.ILETISIM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Yonetim/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IL.I_ADI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILCE.IC_ADI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILET_ADRES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILET_EV_TEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILET_CEP_TEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILET_EPOSTA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IL.I_ADI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILCE.IC_ADI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILET_ADRES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILET_EV_TEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILET_CEP_TEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILET_EPOSTA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ILET_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ILET_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ILET_ID })
+        </td>
+    </tr>
+}
+
+</table>

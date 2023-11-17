@@ -1,0 +1,73 @@
+﻿@model GOOS_DEMO.Models.OGRENCI
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Yonetim/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>OGRENCI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ILETISIM.ILET_ADRES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILETISIM.ILET_ADRES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KULLANICI.K_ADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KULLANICI.K_ADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCI_NO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCI_NO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCI_ADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCI_ADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCI_SOYADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCI_SOYADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCI_CINSIYET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCI_CINSIYET)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,60 @@
+﻿@model GOOS_DEMO.Models.KULLANICI
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>KULLANICI</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.KULLANICI_TURU.KT_ADI)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.KULLANICI_TURU.KT_ADI)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.K_ADI)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.K_ADI)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.K_PAROLA)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.K_PAROLA)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.K_DURUMU)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.K_DURUMU)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
